@@ -10,7 +10,7 @@ node {
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
     
-     if (${VALUE1} != ${VALUE1}) {
+     if (${VALUE1} != ${VALUE2}) {
             echo 'Values are not equal'
         } 
     
