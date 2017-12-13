@@ -11,7 +11,7 @@ node {
   echo "VALUE2 = ${VALUE2}"
     
     script {
-     if (${VALUE1} != ${VALUE2}) {
+     if (VALUE1 != VALUE2) {
             echo 'Values are not equal'
         } 
     }
