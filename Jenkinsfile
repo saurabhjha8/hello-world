@@ -10,9 +10,11 @@ node {
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
     
+    script {
      if (${VALUE1} != ${VALUE2}) {
             echo 'Values are not equal'
         } 
+    }
     
     checkpoint "checkpoint before stage Dev"
      stage('Build') {
