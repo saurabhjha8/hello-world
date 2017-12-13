@@ -3,7 +3,7 @@ node {
     
      properties([
   	       parameters([
-  		       string(name: 'VALUE1', defaultValue: '1', description: 'Provide value1')
+  		       string(name: 'VALUE1', defaultValue: '1', description: 'Provide value1'),
                string(name: 'VALUE2', defaultValue: '2', description: 'Provide value2')
   	                 ])
                ])  
