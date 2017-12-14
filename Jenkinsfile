@@ -1,7 +1,9 @@
 
 checkpoint "checkpoint before node master"
 node {
-    echo "Build ID: ${env.BUILD_ID}"
+    echo "Build ID: ${env.START}"
+    def x = 4+3
+    echo "x: ${x}"
 }
 
 checkpoint "checkpoint before default node"
@@ -15,6 +17,7 @@ node {
                ])  
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
+    echo "x: ${x}"
     echo "Build Number: ${env.BUILD_NUMBER}"
     
     script {
