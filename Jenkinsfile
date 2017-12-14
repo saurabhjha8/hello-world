@@ -1,7 +1,7 @@
 
 checkpoint "checkpoint before node master"
 node('master') {
-    echo "Build ID: env.BUILD_ID
+    echo "Build ID: env.BUILD_ID"
 }
 
 checkpoint "checkpoint before default node"
