@@ -13,7 +13,7 @@ node {
     script {
      if (VALUE1 != VALUE2) {
             echo 'Values are not equal'
-            System.exit(-1)
+            sh "exit 1"
             currentBuild.result = 'FAILURE'
             
         } 
