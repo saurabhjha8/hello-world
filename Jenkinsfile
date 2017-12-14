@@ -1,7 +1,7 @@
 
 checkpoint "checkpoint before node master"
 node {
-    echo "Build ID: env.BUILD_ID"
+    echo "Build ID: ${env.BUILD_ID}"
 }
 
 checkpoint "checkpoint before default node"
@@ -15,7 +15,7 @@ node {
                ])  
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
-    echo "Build Number: env.BUILD_NUMBER"
+    echo "Build Number: ${env.BUILD_NUMBER}"
     
     script {
      if (VALUE1 != VALUE2) {
