@@ -1,6 +1,6 @@
 
 checkpoint "checkpoint before node master"
-node('Master1') {
+node {
     echo "Build ID: env.BUILD_ID"
 }
 
