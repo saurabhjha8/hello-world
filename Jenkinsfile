@@ -1,9 +1,8 @@
 
 checkpoint "checkpoint before node master"
-def x
+def x = 4+3
 node {
-    echo "Build ID: ${env.START}"
-    x = 4+3
+    echo "Build ID: ${env.BUILD_STARTTIME}"    
     echo "x: ${x}"
 }
 
