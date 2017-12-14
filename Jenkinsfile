@@ -2,8 +2,8 @@
 checkpoint "checkpoint before node master"
 def x = 4+3
 node {
-    echo "Build TIMESTAMP: ${env.BUILD_TIMESTAMP}"    
-    echo "x: ${x}"
+    echo "Build Number: ${env.BUILD_NUMBER}"
+    echo "Value of x: ${x}"
 }
 
 checkpoint "checkpoint before default node"
@@ -17,9 +17,8 @@ node {
                ])  
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
-    echo "x: ${x}"
-    echo "Build Number: ${env.BUILD_NUMBER}"
-    echo "Build TIMESTAMP: ${env.BUILD_TIMESTAMP}"    
+    echo "Value of x: ${x}"
+    echo "Build Number: ${env.BUILD_NUMBER}"    
     
     script {
      if (VALUE1 != VALUE2) {
