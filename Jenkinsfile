@@ -13,6 +13,7 @@ node {
     script {
      if (VALUE1 != VALUE2) {
             echo 'Values are not equal'
+            currentBuild.result = 'FAILURE'
         } 
     }
     
