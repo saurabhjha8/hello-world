@@ -1,4 +1,10 @@
-checkpoint "checkpoint before node"
+
+checkpoint "checkpoint before node master"
+node('master') {
+    echo "Build ID: env.BUILD_ID
+}
+
+checkpoint "checkpoint before default node"
 node {
     
      properties([
@@ -9,6 +15,7 @@ node {
                ])  
   echo "VALUE1 = ${VALUE1}"
   echo "VALUE2 = ${VALUE2}"
+    echo "Build Number: env.BUILD_NUMBER"
     
     script {
      if (VALUE1 != VALUE2) {
@@ -19,13 +26,13 @@ node {
         } 
     }
     
-    checkpoint "checkpoint before stage Dev"
      stage('Build') {
    echo 'Hello Build'
      }
     
-     checkpoint "checkpoint before stage Deploy"
       stage('Deploy') {
           echo 'Hello Deploy'
       }
 }
+
+
